@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  div(style='display: none')
+    div(style='display: none')
+        ul
+        ul The Student Number entered does not exist. Please try again with a valid Student number.
+
+  .vr
+    form(id="sample", action="/login", method="post")
+      input(type='hidden')
+          label(for="loginId") Enter the student Id:
+            input(type="text" name="loginId" id="loginId" placeholder="Logon Id")       
+          label(for='roleType') Enter Student Role Numer:
+              select(name='roleType')
+                option(value='G0' disabled selected) Select
+                option(value='G1') Std - A - G1
+                option(value='G5') Std - B - G5
+        input(type="submit", id="submit", name="submit", value="Login")
